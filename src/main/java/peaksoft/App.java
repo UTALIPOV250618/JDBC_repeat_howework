@@ -35,8 +35,9 @@ public class App
 //        CountryService.getAllCountry();
         System.out.println("*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*");
 //        MinisterService.createTable();
-        MinisterOfCity ministerOfCity = new MinisterOfCity("Sulaiman","Talipov");
+        MinisterOfCity ministerOfCity = new MinisterOfCity("Nurbek","Kamilov");
         MinisterService.addMinister(ministerOfCity);
-        MinisterService.getAllMinisters();
+//        MinisterService.getAllMinisters();
+        MinisterService.getMinistersById(2);
     }
 }

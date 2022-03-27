@@ -50,6 +50,21 @@ public class MinisterService {
         }catch (SQLException e){
             System.out.println(e.getMessage());
         }
-
+    }
+    public static void getMinistersById(int ministerID){
+        String sql ="SELECT*FROM ministerofcity WHERE minister_id=?";
+        try(Connection connection  =JdbcConf.connection();
+        PreparedStatement preparedStatement = connection.prepareStatement(sql)){
+            preparedStatement.setInt(1,ministerID);
+            ResultSet resultSet = preparedStatement.executeQuery();
+            while (resultSet.next()){
+                System.out.println(resultSet.getInt("minister_id")+" "+
+                        resultSet.getString("minister_name")+" "+
+                        resultSet.getString("minister_surname")+" "+
+                        resultSet.getInt("city_id"));
+            }
+        }catch (SQLException e){
+            System.out.println(e.getMessage());
+        }
     }
 }
