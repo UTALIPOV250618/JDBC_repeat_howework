@@ -33,6 +33,7 @@ public class App
 //        CountryService.addCountry(country5);
 
 //        CountryService.getAllCountry();
+        System.out.println("*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*");
 //        MinisterService.createTable();
         MinisterOfCity ministerOfCity = new MinisterOfCity("Sulaiman","Talipov");
         MinisterService.addMinister(ministerOfCity);
